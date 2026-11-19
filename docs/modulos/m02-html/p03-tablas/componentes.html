@@ -1,0 +1,659 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Guía de componentes HTML de la Clínica Veterinaria ConSentidos">
+    <meta name="author" content="Niis Vivar Mar Toribio">
+    <title>Guía de componentes | Clínica Veterinaria ConSentidos</title>
+    <link rel="icon" href="assets/img/logo-consentidos.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/consentidos.css">
+    <script src="assets/js/componentes.js" defer></script>
+</head>
+
+<body>
+    <a href="#contenido">Saltar al contenido</a>
+
+    <header id="inicio">
+        <img src="assets/img/logo-consentidos.svg" alt="" width="64" height="64">
+
+        <hgroup>
+            <h1>Guía de componentes HTML</h1>
+            <p>Clínica Veterinaria ConSentidos</p>
+        </hgroup>
+
+        <p>
+            Niis Vivar Mar Toribio<br>
+            4GS122-19
+        </p>
+    </header>
+
+    <nav aria-label="Navegación del sitio">
+    <h2>El sitio</h2>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="componentes.html">Guía de componentes</a></li>
+        <li><a href="tarifas.html">Tarifas</a></li>
+        <li><a href="paginas/test.html">Página de prueba</a></li>
+    </ul>
+</nav>
+
+    <main id="contenido">
+
+        <p>
+            Esta página reúne los elementos HTML que usa el sitio.
+            De cada uno se muestra cómo se ve, su código y,
+            cuando hace falta, una nota.
+        </p>
+
+        <section id="texto">
+            <h2>Texto</h2>
+
+            <article id="encabezados">
+                <h3>Encabezados</h3>
+                <p>Los encabezados permiten organizar el contenido en diferentes niveles.</p>
+
+                <div class="demo">
+                    <h4>Encabezado de nivel 4</h4>
+                    <h5>Encabezado de nivel 5</h5>
+                    <h6>Encabezado de nivel 6</h6>
+                </div>
+
+                <pre><code>&lt;h4&gt;Encabezado de nivel 4&lt;/h4&gt;
+&lt;h5&gt;Encabezado de nivel 5&lt;/h5&gt;
+&lt;h6&gt;Encabezado de nivel 6&lt;/h6&gt;</code></pre>
+            </article>
+
+            <article id="parrafo">
+                <h3>Párrafo &lt;p&gt; y salto de línea &lt;br&gt;</h3>
+
+                <p>El párrafo organiza el texto, mientras que el salto de línea permite separar líneas cuando el contenido lo necesita.</p>
+
+                <div class="demo">
+                    <p>Atendemos perros, gatos y animales pequeños.</p>
+
+                    <p>
+                        Clínica Veterinaria ConSentidos<br>
+                        Santiago, Veraguas<br>
+                        Panamá
+                    </p>
+                </div>
+
+                <pre><code>&lt;p&gt;Atendemos perros, gatos y animales pequeños.&lt;/p&gt;
+
+&lt;p&gt;
+    Clínica Veterinaria ConSentidos&lt;br&gt;
+    Santiago, Veraguas&lt;br&gt;
+    Panamá
+&lt;/p&gt;</code></pre>
+            </article>
+
+            <article id="enfasis">
+                <h3>Énfasis &lt;strong&gt;, &lt;em&gt; y &lt;mark&gt;</h3>
+
+                <p>Cada uno comunica un significado distinto, no solo un aspecto visual.</p>
+
+                <div class="demo">
+                    <p>La vacuna antirrábica es <strong>obligatoria</strong> cada año.</p>
+
+                    <p>Tu mascota <em>sí</em> necesita agua fresca, aunque no la pida.</p>
+
+                    <p>Recuerda traer el <mark>carné de vacunación</mark> a tu próxima cita.</p>
+                </div>
+
+                <pre><code>&lt;p&gt;La vacuna antirrábica es &lt;strong&gt;obligatoria&lt;/strong&gt; cada año.&lt;/p&gt;
+
+&lt;p&gt;Tu mascota &lt;em&gt;sí&lt;/em&gt; necesita agua fresca, aunque no la pida.&lt;/p&gt;
+
+&lt;p&gt;Recuerda traer el &lt;mark&gt;carné de vacunación&lt;/mark&gt; a tu próxima cita.&lt;/p&gt;</code></pre>
+
+                <aside>
+                    <p><strong>Buena práctica:</strong> utiliza estas etiquetas por su significado, no solamente para cambiar la apariencia del texto.</p>
+                </aside>
+            </article>
+
+            <article id="codigo">
+                <h3>Código &lt;pre&gt; y &lt;code&gt;</h3>
+
+                <p>
+                    La etiqueta code identifica fragmentos de código,
+                    mientras que pre conserva los espacios y saltos de línea.
+                </p>
+
+                <div class="demo">
+                    <p>Para crear un párrafo se utiliza la etiqueta <code>&lt;p&gt;</code>.</p>
+
+                    <pre><code>&lt;h1&gt;Bienvenidos&lt;/h1&gt;
+&lt;p&gt;Esta es mi página web.&lt;/p&gt;</code></pre>
+                </div>
+
+                <pre><code>&lt;p&gt;Para crear un párrafo se utiliza la etiqueta
+&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h1&amp;gt;Bienvenidos&amp;lt;/h1&amp;gt;
+&amp;lt;p&amp;gt;Esta es mi página web.&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            </article>
+
+            <article id="fecha-hora">
+                <h3>Fecha y hora &lt;time&gt;</h3>
+
+                <p>
+                    La etiqueta time representa fechas y horas mediante un texto
+                    legible para las personas y un atributo datetime para las máquinas.
+                </p>
+
+                <div class="demo">
+                    <p>
+                        Nuestra próxima jornada de vacunación será el
+                        <time datetime="2026-12-05">5 de diciembre de 2026</time>.
+                    </p>
+                </div>
+
+                <pre><code>&lt;p&gt;
+    Nuestra próxima jornada de vacunación será el
+    &lt;time datetime="2026-12-05"&gt;5 de diciembre de 2026&lt;/time&gt;.
+&lt;/p&gt;</code></pre>
+            </article>
+        </section>
+
+        <section id="listas">
+            <h2>Listas</h2>
+
+            <article id="lista-ordenada">
+                <h3>Lista ordenada &lt;ol&gt;</h3>
+
+                <p>
+                    La lista ordenada presenta elementos en una secuencia,
+                    generalmente mediante números o letras.
+                </p>
+
+                <div class="demo">
+                    <p>Pasos para atender una mascota:</p>
+
+                    <ol>
+                        <li>Registro en recepción.</li>
+                        <li>
+                            Triaje.
+                            <ol type="a">
+                                <li>Medición del peso.</li>
+                                <li>Medición de la temperatura.</li>
+                            </ol>
+                        </li>
+                        <li>Consulta con el veterinario.</li>
+                        <li>Entrega de indicaciones.</li>
+                    </ol>
+                </div>
+
+                <pre><code>&lt;ol&gt;
+    &lt;li&gt;Registro en recepción.&lt;/li&gt;
+    &lt;li&gt;
+        Triaje.
+        &lt;ol type="a"&gt;
+            &lt;li&gt;Medición del peso.&lt;/li&gt;
+            &lt;li&gt;Medición de la temperatura.&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Consulta con el veterinario.&lt;/li&gt;
+    &lt;li&gt;Entrega de indicaciones.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            </article>
+
+            <article id="lista-no-ordenada">
+                <h3>Lista no ordenada &lt;ul&gt;</h3>
+
+                <p>
+                    La lista no ordenada presenta elementos cuyo orden no es importante.
+                    Generalmente utiliza viñetas.
+                </p>
+
+                <div class="demo">
+                    <p>Recomendaciones para el cuidado de una mascota:</p>
+
+                    <ul>
+                        <li>Proporcionar agua fresca.</li>
+                        <li>Mantener al día las vacunas.</li>
+                        <li>Ofrecer una alimentación adecuada.</li>
+                        <li>Realizar visitas periódicas al veterinario.</li>
+                    </ul>
+                </div>
+
+                <pre><code>&lt;ul&gt;
+    &lt;li&gt;Proporcionar agua fresca.&lt;/li&gt;
+    &lt;li&gt;Mantener al día las vacunas.&lt;/li&gt;
+    &lt;li&gt;Ofrecer una alimentación adecuada.&lt;/li&gt;
+    &lt;li&gt;Realizar visitas periódicas al veterinario.&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </article>
+
+            <article id="lista-descripcion">
+                <h3>Lista de descripción &lt;dl&gt;</h3>
+
+                <p>
+                    La lista de descripción permite presentar términos
+                    acompañados de sus respectivas definiciones.
+                </p>
+
+                <div class="demo">
+                    <dl>
+                        <dt>Desparasitación</dt>
+                        <dd>Tratamiento que elimina parásitos internos o externos.</dd>
+
+                        <dt>Microchip</dt>
+                        <dd>Dispositivo que permite identificar a una mascota mediante un código.</dd>
+                    </dl>
+                </div>
+
+                <pre><code>&lt;dl&gt;
+    &lt;dt&gt;Desparasitación&lt;/dt&gt;
+    &lt;dd&gt;Tratamiento que elimina parásitos internos o externos.&lt;/dd&gt;
+
+    &lt;dt&gt;Microchip&lt;/dt&gt;
+    &lt;dd&gt;Dispositivo que permite identificar a una mascota mediante un código.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+            </article>
+        </section>
+
+        <section id="enlaces">
+            <h2>Enlaces</h2>
+
+            <article id="enlace-interno">
+                <h3>Enlace a otra página del sitio</h3>
+
+                <p>
+                    Los enlaces internos permiten navegar entre las páginas
+                    de un mismo sitio web mediante rutas relativas.
+                </p>
+
+                <div class="demo">
+                    <p>
+                        <a href="servicios.html">Conoce nuestros servicios veterinarios</a>.
+                    </p>
+                </div>
+
+                <pre><code>&lt;a href="servicios.html"&gt;Conoce nuestros servicios veterinarios&lt;/a&gt;</code></pre>
+            </article>
+
+            <article id="enlace-externo">
+                <h3>Enlace a un sitio de terceros</h3>
+
+                <p>
+                    Los enlaces externos permiten visitar páginas de otros sitios web.
+                    Pueden abrirse en una pestaña nueva.
+                </p>
+
+                <div class="demo">
+                    <p>
+                        Consulta el sitio del
+                        <a href="https://www.mida.gob.pa"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Ministerio de Desarrollo Agropecuario (se abre en otra pestaña)
+                        </a>.
+                    </p>
+                </div>
+
+                <pre><code>&lt;a href="https://www.mida.gob.pa"
+   target="_blank"
+   rel="noopener noreferrer"&gt;
+    Ministerio de Desarrollo Agropecuario (se abre en otra pestaña)
+&lt;/a&gt;</code></pre>
+
+                <aside>
+                    <p>
+                        <strong>Buena práctica:</strong>
+                        utiliza rel="noopener noreferrer" junto con target="_blank"
+                        para mejorar la seguridad y privacidad al abrir otra pestaña.
+                    </p>
+                </aside>
+            </article>
+
+            <article id="enlace-descarga">
+                <h3>Enlace de descarga</h3>
+
+                <p>
+                    El atributo download permite ofrecer un archivo para descargar
+                    en lugar de abrirlo directamente.
+                </p>
+
+                <div class="demo">
+                    <p>
+                        <a href="assets/docs/guia-vacunacion.pdf" download>
+                            Descargar la guía de vacunación (PDF)
+                        </a>
+                    </p>
+                </div>
+
+                <pre><code>&lt;a href="assets/docs/guia-vacunacion.pdf" download&gt;
+    Descargar la guía de vacunación (PDF)
+&lt;/a&gt;</code></pre>
+            </article>
+
+            <article id="enlace-contacto">
+                <h3>Enlaces de correo y teléfono</h3>
+
+                <p>
+                    Los enlaces mailto y tel permiten iniciar una acción de contacto
+                    desde el dispositivo del usuario.
+                </p>
+
+                <div class="demo">
+                    <p>
+                        Correo:
+                        <a href="mailto:citas@consentidos.example">
+                            citas@consentidos.example
+                        </a>
+                    </p>
+
+                    <p>
+                        Teléfono:
+                        <a href="tel:+50799800000">
+                            +507 998-0000
+                        </a>
+                    </p>
+                </div>
+
+                <pre><code>&lt;a href="mailto:citas@consentidos.example"&gt;
+    citas@consentidos.example
+&lt;/a&gt;
+
+&lt;a href="tel:+50799800000"&gt;
+    +507 998-0000
+&lt;/a&gt;</code></pre>
+            </article>
+        </section>
+
+        <section id="multimedia">
+            <h2>Imágenes y multimedia</h2>
+
+            <article id="imagen">
+                <h3>Imagen con leyenda &lt;figure&gt;</h3>
+
+                <p>
+                    La etiqueta figure permite agrupar una imagen con una leyenda
+                    que describe o complementa su contenido.
+                </p>
+
+                <div class="demo">
+                    <figure>
+                        <img src="assets/img/luna.svg"
+                             alt="Ilustración de Luna, una gata gris atigrada, sentada"
+                             width="320"
+                             height="240"
+                             loading="lazy">
+                        <figcaption>Luna, paciente del mes.</figcaption>
+                    </figure>
+                </div>
+
+                <pre><code>&lt;figure&gt;
+    &lt;img src="assets/img/luna.svg"
+         alt="Ilustración de Luna, una gata gris atigrada, sentada"
+         width="320" height="240" loading="lazy"&gt;
+    &lt;figcaption&gt;Luna, paciente del mes.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+            </article>
+
+            <article id="audio">
+                <h3>Audio &lt;audio&gt;</h3>
+
+                <p>
+                    La etiqueta audio permite insertar archivos de sonido en una
+                    página web y ofrecer controles para reproducirlos.
+                </p>
+
+                <div class="demo">
+                    <p id="etq-audio">Tono de recordatorio de citas:</p>
+
+                    <audio controls preload="metadata" aria-labelledby="etq-audio">
+                        <source src="assets/media/recordatorio.mp3" type="audio/mpeg">
+                        Tu navegador no reproduce audio.
+                        <a href="assets/media/recordatorio.mp3">Descarga el tono</a>.
+                    </audio>
+                </div>
+
+                <pre><code>&lt;p id="etq-audio"&gt;Tono de recordatorio de citas:&lt;/p&gt;
+
+&lt;audio controls preload="metadata" aria-labelledby="etq-audio"&gt;
+    &lt;source src="assets/media/recordatorio.mp3" type="audio/mpeg"&gt;
+    Tu navegador no reproduce audio.
+    &lt;a href="assets/media/recordatorio.mp3"&gt;Descarga el tono&lt;/a&gt;.
+&lt;/audio&gt;</code></pre>
+            </article>
+
+            <article id="video">
+                <h3>Video con subtítulos &lt;video&gt;</h3>
+
+                <p>
+                    La etiqueta video permite reproducir videos en una página web.
+                    También admite subtítulos para facilitar su comprensión.
+                </p>
+
+                <div class="demo">
+                    <video controls width="640" height="360" preload="metadata"
+                           poster="assets/media/consejos-poster.jpg">
+                        <source src="assets/media/consejos.webm" type="video/webm">
+                        <source src="assets/media/consejos.mp4" type="video/mp4">
+
+                        <track kind="subtitles" src="assets/media/consejos-es.vtt"
+                               srclang="es" label="Español" default>
+
+                        Tu navegador no reproduce video.
+                        <a href="assets/media/consejos.mp4">Descarga el video</a>.
+                    </video>
+                </div>
+
+                <pre><code>&lt;video controls width="640" height="360" preload="metadata"
+       poster="assets/media/consejos-poster.jpg"&gt;
+    &lt;source src="assets/media/consejos.webm" type="video/webm"&gt;
+    &lt;source src="assets/media/consejos.mp4" type="video/mp4"&gt;
+    &lt;track kind="subtitles" src="assets/media/consejos-es.vtt"
+           srclang="es" label="Español" default&gt;
+    Tu navegador no reproduce video.
+    &lt;a href="assets/media/consejos.mp4"&gt;Descarga el video&lt;/a&gt;.
+&lt;/video&gt;</code></pre>
+            </article>
+
+            <article id="iframe-propio">
+                <h3>Página incrustada &lt;iframe&gt;</h3>
+
+                <p>
+                    La etiqueta iframe permite mostrar otra página web dentro
+                    de la página actual.
+                </p>
+
+                <div class="demo">
+                    <iframe src="paginas/test.html"
+                            title="Página de prueba del sitio de ConSentidos"
+                            width="600"
+                            height="240"
+                            loading="lazy"></iframe>
+                </div>
+
+                <pre><code>&lt;iframe src="paginas/test.html"
+        title="Página de prueba del sitio de ConSentidos"
+        width="600" height="240" loading="lazy"&gt;
+&lt;/iframe&gt;</code></pre>
+            </article>
+
+            <article id="iframe-terceros">
+                <h3>Mapa incrustado de terceros</h3>
+
+                <p>
+                    También podemos incorporar contenido de otros sitios web,
+                    como mapas interactivos.
+                </p>
+
+                <div class="demo">
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-80.9950%2C8.0900%2C-80.9650%2C8.1100&amp;layer=mapnik"
+                        title="Mapa de Santiago de Veraguas, donde está la clínica"
+                        width="600"
+                        height="340"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                        sandbox="allow-scripts allow-popups">
+                    </iframe>
+                </div>
+
+                <pre><code>&lt;iframe
+    src="https://www.openstreetmap.org/export/embed.html?bbox=-80.9950%2C8.0900%2C-80.9650%2C8.1100&amp;layer=mapnik"
+    title="Mapa de Santiago de Veraguas, donde está la clínica"
+    width="600" height="340" loading="lazy"
+    referrerpolicy="no-referrer"
+    sandbox="allow-scripts allow-popups"&gt;
+&lt;/iframe&gt;</code></pre>
+            </article>
+
+            <article id="documento-pdf">
+                <h3>Documento PDF incrustado &lt;object&gt;</h3>
+
+                <p>
+                    La etiqueta object permite mostrar documentos externos,
+                    como archivos PDF, dentro de una página web.
+                </p>
+
+                <div class="demo">
+                    <object data="assets/docs/guia-vacunacion.pdf"
+                            type="application/pdf"
+                            width="600"
+                            height="400">
+                        <p>
+                            Tu navegador no muestra PDF.
+                            <a href="assets/docs/guia-vacunacion.pdf">
+                                Descarga la guía
+                            </a>.
+                        </p>
+                    </object>
+                </div>
+
+                <pre><code>&lt;object data="assets/docs/guia-vacunacion.pdf"
+        type="application/pdf" width="600" height="400"&gt;
+    &lt;p&gt;Tu navegador no muestra PDF.
+        &lt;a href="assets/docs/guia-vacunacion.pdf"&gt;
+            Descarga la guía
+        &lt;/a&gt;.
+    &lt;/p&gt;
+&lt;/object&gt;</code></pre>
+            </article>
+        </section>
+
+        <section id="interactivos">
+            <h2>Elementos interactivos</h2>
+
+            <article id="preguntas-frecuentes">
+                <h3>Preguntas frecuentes &lt;details&gt;</h3>
+
+                <p>
+                    Las etiquetas details y summary permiten crear preguntas
+                    desplegables sin utilizar JavaScript.
+                </p>
+
+                <div class="demo">
+                    <details name="preguntas">
+                        <summary>¿Cada cuánto debo desparasitar a mi perro?</summary>
+                        <p>Cada tres meses, con la dosis que indique el veterinario.</p>
+                    </details>
+
+                    <details name="preguntas">
+                        <summary>¿Necesito cita para vacunar?</summary>
+                        <p>Sí. Así preparamos la vacuna y revisamos antes su carné.</p>
+                    </details>
+                </div>
+
+                <pre><code>&lt;details name="preguntas"&gt;
+    &lt;summary&gt;¿Cada cuánto debo desparasitar a mi perro?&lt;/summary&gt;
+    &lt;p&gt;Cada tres meses, con la dosis que indique el veterinario.&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;details name="preguntas"&gt;
+    &lt;summary&gt;¿Necesito cita para vacunar?&lt;/summary&gt;
+    &lt;p&gt;Sí. Así preparamos la vacuna y revisamos antes su carné.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+            </article>
+
+            <article id="medidor-progreso">
+                <h3>Medidor y barra de progreso &lt;meter&gt; y &lt;progress&gt;</h3>
+
+                <p>
+                    El elemento meter representa una medida dentro de un rango,
+                    mientras que progress muestra el avance de una tarea.
+                </p>
+
+                <div class="demo">
+                    <p>
+                        <label for="peso-luna">Peso de Luna</label>
+                        <meter id="peso-luna" min="0" max="8" low="3" high="5"
+                               optimum="4" value="4.2">4,2 kg</meter>
+                        4,2 kg (rango saludable: 3 a 5 kg)
+                    </p>
+
+                    <p>
+                        <label for="plan-vacunas">Plan de vacunación de Max</label>
+                        <progress id="plan-vacunas" value="2" max="5">2 de 5 dosis</progress>
+                        <output id="plan-texto" for="plan-vacunas">2 de 5 dosis</output>
+                    </p>
+
+                    <button type="button" id="btn-dosis">Registrar una dosis</button>
+                    <button type="button" id="btn-reiniciar" hidden>Reiniciar el plan</button>
+                </div>
+
+                <pre><code>&lt;p&gt;
+    &lt;label for="peso-luna"&gt;Peso de Luna&lt;/label&gt;
+    &lt;meter id="peso-luna" min="0" max="8" low="3" high="5"
+           optimum="4" value="4.2"&gt;4,2 kg&lt;/meter&gt;
+    4,2 kg (rango saludable: 3 a 5 kg)
+&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;label for="plan-vacunas"&gt;Plan de vacunación de Max&lt;/label&gt;
+    &lt;progress id="plan-vacunas" value="2" max="5"&gt;2 de 5 dosis&lt;/progress&gt;
+    &lt;output id="plan-texto" for="plan-vacunas"&gt;2 de 5 dosis&lt;/output&gt;
+&lt;/p&gt;
+
+&lt;button type="button" id="btn-dosis"&gt;Registrar una dosis&lt;/button&gt;
+&lt;button type="button" id="btn-reiniciar" hidden&gt;Reiniciar el plan&lt;/button&gt;</code></pre>
+            </article>
+        </section>
+
+    </main>
+
+    <aside>
+        <h2>Horario de atención</h2>
+        <p>
+            Lunes a viernes de 8:00 a. m. a 6:00 p. m.<br>
+            Sábados de 8:00 a. m. a 12:00 m.<br>
+            Urgencias: las 24 horas por teléfono.
+        </p>
+    </aside>
+
+    <footer>
+        <address>
+            <strong>Clínica Veterinaria ConSentidos</strong><br>
+            Avenida Central, Santiago de Veraguas, Panamá<br>
+            <a href="tel:+50799800000">+507 998-0000</a> |
+            <a href="mailto:citas@consentidos.example">citas@consentidos.example</a>
+        </address>
+
+        <p>
+            Última actualización:
+            <time datetime="2026-11-19">19 de noviembre de 2026</time>.
+        </p>
+
+        <p><a href="#inicio">Volver arriba</a></p>
+
+        <p>
+            <small>
+                &copy; 2026 Clínica Veterinaria ConSentidos. Proyecto académico del
+                curso Desarrollo de Software V, Universidad Tecnológica de Panamá,
+                Centro Regional de Veraguas. Los datos de contacto son ficticios.
+            </small>
+        </p>
+    </footer>
+</body>
+
+</html>
